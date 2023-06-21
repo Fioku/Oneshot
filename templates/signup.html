@@ -1,0 +1,20 @@
+{% extends 'base-auth.html' %}
+{% load static %}
+{% block style %}<link rel="stylesheet" href="{% static 'signup.css' %}">{% endblock %}
+{% block title %}ONESHOT | Signup{% endblock %}
+
+{% block content %}
+
+    <form action="#" method="POST">
+        <div class="signup">
+            <input type="text" name="FirstName" placeholder="First Name" required="required">
+            <input type="text" name="LastName" placeholder="Last Name" required="required">
+            <input type="email" name="email" placeholder="Email Address" required="required">
+            <input type="password" name="password" placeholder="Password" required="required">
+            <input type="password" name="password-confirmation" placeholder="Password Confirmation" required="required">
+            <input name="submit" type="submit" value="Signup">
+            <p>You're already have an account? <a href="{% url 'login' %}">Login</a></p>
+        </div>
+    </form>
+
+{% endblock %}
